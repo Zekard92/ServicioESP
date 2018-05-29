@@ -1,0 +1,9 @@
+C:\Development\ServicioESP\ServicioESP_DB\bin\Debug\ServicioESP_DB.dacpac
+C:\Development\ServicioESP\ServicioESP_DB\bin\Debug\ServicioESP_DB.dll
+C:\Development\ServicioESP\ServicioESP_DB\bin\Debug\ServicioESP_DB.pdb
+C:\Development\ServicioESP\ServicioESP_DB\obj\Debug\Model.xml
+C:\Development\ServicioESP\ServicioESP_DB\obj\Debug\refactor.xml
+C:\Development\ServicioESP\ServicioESP_DB\obj\Debug\postdeploy.sql
+C:\Development\ServicioESP\ServicioESP_DB\obj\Debug\predeploy.sql
+C:\Development\ServicioESP\ServicioESP_DB\obj\Debug\ServicioESP_DB.dll
+C:\Development\ServicioESP\ServicioESP_DB\obj\Debug\ServicioESP_DB.pdb

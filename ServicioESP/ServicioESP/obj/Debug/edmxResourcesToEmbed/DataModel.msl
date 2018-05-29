@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServicioESP_DBModelStoreContainer" CdmEntityContainer="ServicioESP_DBEntities">
+    <EntitySetMapping Name="Luz">
+      <EntityTypeMapping TypeName="ServicioESP_DBModel.Luz">
+        <MappingFragment StoreEntitySet="Luz">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

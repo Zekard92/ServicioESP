@@ -44,7 +44,7 @@ namespace ServicioESP.Controllers
 				return Request.CreateErrorResponse (HttpStatusCode.BadRequest, ex.Message);
 			}
 		}
-		public HttpResponseMessage Put(int id, [FromBody] Luz lampara)
+		public HttpResponseMessage Put([FromBody] Luz lampara)
 		{
 			try
 			{

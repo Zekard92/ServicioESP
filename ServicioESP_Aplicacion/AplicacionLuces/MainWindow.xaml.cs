@@ -47,12 +47,12 @@ namespace AplicacionLuces
 				var a = (Luz)await servicio.Obtener (1);
 				if (a.State == true)
 				{
-					lblName.Content = "Encendido";
+					lblName.Content = string.Format ("Luz '{0}': Encendida", a.Name);
 					btnActivar.Content = "Apagar";
 				}
 				if (a.State == false)
 				{
-					lblName.Content = "Apagado";
+					lblName.Content = string.Format ("Luz '{0}': Apagada", a.Name);
 					btnActivar.Content = "Encender";
 				}
 			}
@@ -60,6 +60,12 @@ namespace AplicacionLuces
 			{
 				MessageBox.Show (ex.Message);
 			}
+		}
+
+		private void Reporte(object sender, RoutedEventArgs ev)
+		{
+			wndReporte reporte = new wndReporte ();
+			reporte.ShowDialog ();
 		}
 	}
 }

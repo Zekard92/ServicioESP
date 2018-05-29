@@ -9,17 +9,17 @@ namespace AplicacionLuces
 {
 	public class AdministradorReporte
 	{
-		public async void CargarReporteArtista(LocalReport reporte, int artistaId)
+		public async Task<int> CargarReporte(LocalReport reporte)
 		{
-			reporte.ReportPath = @"..\ReporteLuces\rptLuces.rdlc";
-
-			reporte.EnableExternalImages = true;
+			reporte.ReportPath = @".\rptLuces.rdlc";
 
 			ServicioLuces servLuces = new ServicioLuces ();
 
 			var luces = await servLuces.Obtener ();
 
-			reporte.DataSources.Add (new ReportDataSource ("Luces", luces));
+			reporte.DataSources.Add (new ReportDataSource ("LucesData", luces));
+
+			return 0;
 		}
 	}
 }

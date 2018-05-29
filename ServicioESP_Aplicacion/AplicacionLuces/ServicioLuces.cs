@@ -50,25 +50,6 @@ namespace AplicacionLuces
 			}
 		}
 
-		public async void Agregar(Luz lampara)
-		{
-			try
-			{
-				using (HttpClient client = new HttpClient ())
-				{
-					var json = JsonConvert.SerializeObject (lampara);
-					var stringContent = new StringContent (json, UnicodeEncoding.UTF8, "application/json");
-					var response = await client.PostAsync (uri, stringContent);
-					await VerificarRespuesta (response);
-				}
-			}
-			catch (ArgumentException) { throw; }
-			catch (Exception)
-			{
-				throw new Exception ("Ha ocurrido un error al intentar agregar la lampara");
-			}
-		}
-
 		public async void Modificar(Luz lampara)
 		{
 			try
@@ -85,23 +66,6 @@ namespace AplicacionLuces
 			catch (Exception ex)
 			{
 				throw new Exception ("Ha ocurrido un error al intentar modificar la lampara");
-			}
-		}
-
-		public async void Eliminar(int id)
-		{
-			try
-			{
-				using (HttpClient client = new HttpClient ())
-				{
-					var response = await client.DeleteAsync (string.Format ("{0}/{1}", uri, id));
-					await VerificarRespuesta (response);
-				}
-			}
-			catch (ArgumentException) { throw; }
-			catch (Exception)
-			{
-				throw new Exception ("Ha ocurrido un error al intentar eliminar la lampara");
 			}
 		}
 

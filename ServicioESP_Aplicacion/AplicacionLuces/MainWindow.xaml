@@ -6,23 +6,19 @@
         xmlns:local="clr-namespace:AplicacionLuces"
         mc:Ignorable="d"
 		Loaded="Window_Loaded"
-        Title="Luces" Height="86.533" Width="150.307">
+        Title="Luces" Height="92.96" Width="225.131">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
-		<!--<DataGrid AutoGenerateColumns="False" Name="dgLuces">
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="ID" Binding="{Binding Id}" IsReadOnly="True" />
-				<DataGridTextColumn Header="Nombre" Binding="{Binding Name}" Width="2*" IsReadOnly="True" />
-				<DataGridCheckBoxColumn Header="Estado" Binding="{Binding State}" IsReadOnly="True" />
-			</DataGrid.Columns>
-		</DataGrid>-->
 		<WrapPanel>
 			<Label Content="Estado" />
 			<Label Name="lblName" />
 		</WrapPanel>
-		<Button Grid.Row="1" Content="Activar" Name="btnActivar" Click="Activar" />
+		<WrapPanel Grid.Row="1" HorizontalAlignment="Right">
+			<Button Content="Activar" Name="btnActivar" Click="Activar" />
+			<Button Content="Generar Reporte" Click="Reporte" />
+		</WrapPanel>
 	</Grid>
 </Window>
